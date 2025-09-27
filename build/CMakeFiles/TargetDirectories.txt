@@ -1,0 +1,7 @@
+D:/projects/study/5th semester/C/Lab_3/Lib/build/CMakeFiles/ds18b20.dir
+D:/projects/study/5th semester/C/Lab_3/Lib/build/CMakeFiles/edit_cache.dir
+D:/projects/study/5th semester/C/Lab_3/Lib/build/CMakeFiles/rebuild_cache.dir
+D:/projects/study/5th semester/C/Lab_3/Lib/build/CMakeFiles/list_install_components.dir
+D:/projects/study/5th semester/C/Lab_3/Lib/build/CMakeFiles/install.dir
+D:/projects/study/5th semester/C/Lab_3/Lib/build/CMakeFiles/install/local.dir
+D:/projects/study/5th semester/C/Lab_3/Lib/build/CMakeFiles/install/strip.dir
