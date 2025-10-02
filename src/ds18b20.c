@@ -52,31 +52,6 @@ void ds18b20_fill_with_test_data(void) {
     ds18b20_data->log_count = 100;
 }
 
-float ds18b20_calculate_temperature(uint8_t lsb, uint8_t msb) {
-    int16_t raw_temp = (msb << 8) | lsb;
-    return (float)raw_temp / 16.0f;
-}
-
-void ds18b20_add_to_log(float temperature) {
-    if (ds18b20_data == NULL || !ds18b20_data->is_initialized) return;
-    
-    if (ds18b20_data->log_count < 100) {
-        ds18b20_data->log_count++;
-    }
-    
-    ds18b20_data->temperature_log[ds18b20_data->log_index] = temperature;
-    ds18b20_data->log_index = (ds18b20_data->log_index + 1) % 100;
-}
-
-float ds18b20_get_current_temperature(void) {
-    if (ds18b20_data == NULL || !ds18b20_data->is_initialized) return 0.0f;
-    
-    return ds18b20_calculate_temperature(
-        ds18b20_data->temperature_lsb,
-        ds18b20_data->temperature_msb
-    );
-}
-
 void ds18b20_print_structure(void) {
     if (ds18b20_data == NULL) {
         printf("Error: ds18b20_data is NULL\n");
@@ -109,10 +84,5 @@ void ds18b20_print_structure(void) {
         printf("  Log[%d]: %.2f°C\n", i, ds18b20_data->temperature_log[i]);
     }
     
-    float calculated_temp = ds18b20_calculate_temperature(
-        ds18b20_data->temperature_lsb,
-        ds18b20_data->temperature_msb
-    );
-    printf("Calculated Temperature: %.2f°C\n", calculated_temp);
     printf("================================\n\n");
 }

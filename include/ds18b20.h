@@ -41,9 +41,6 @@ extern ds18b20_data_t* ds18b20_data;
 
 void ds18b20_init(void);
 void ds18b20_fill_with_test_data(void);
-float ds18b20_calculate_temperature(uint8_t lsb, uint8_t msb);
-void ds18b20_add_to_log(float temperature);
-float ds18b20_get_current_temperature(void);
 void ds18b20_cleanup(void);
 void ds18b20_print_structure(void);
 
