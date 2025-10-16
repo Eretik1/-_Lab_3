@@ -21,7 +21,7 @@
 
 typedef struct {
     uint8_t temperature_lsb;
-    uint8_t temperature_msb;
+    int8_t temperature_msb;
     uint8_t user_byte_1;
     uint8_t user_byte_2;
     uint8_t configuration;
@@ -39,7 +39,7 @@ typedef struct {
 
 extern ds18b20_data_t* ds18b20_data;
 
-void ds18b20_init(void);
+void ds18b20_init(ds18b20_data_t *ds18b20_data);
 void ds18b20_fill_with_test_data(void);
 void ds18b20_cleanup(void);
 void ds18b20_print_structure(void);

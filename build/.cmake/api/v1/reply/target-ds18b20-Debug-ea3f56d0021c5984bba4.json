@@ -35,7 +35,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 43,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
@@ -47,7 +47,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 32,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
@@ -95,7 +95,7 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "D:/projects/study/5th semester/C/Lab_3/Lib/include"
+					"path" : "D:/projects/study/5th_semester/C/Lab_3/Lib/include"
 				}
 			],
 			"language" : "C",

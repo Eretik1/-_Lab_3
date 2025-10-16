@@ -4,15 +4,16 @@
 
 ds18b20_data_t* ds18b20_data = NULL;
 
-void ds18b20_init(void) {
-    ds18b20_data = (ds18b20_data_t*)malloc(sizeof(ds18b20_data_t));
+void ds18b20_init(ds18b20_data_t *ds18b20_data) {
+    //ds18b20_data_t *ds18b20_data = (ds18b20_data_t *) addr;
+    //ds18b20_data = (ds18b20_data_t*)malloc(sizeof(ds18b20_data_t));
     
     if (ds18b20_data == NULL) {
         printf("Error: Memory allocation failed!\n");
         return;
     }
     
-    memset(ds18b20_data, 0, sizeof(ds18b20_data_t));
+    //memset(ds18b20_data, 0, sizeof(ds18b20_data_t));
     
     ds18b20_data->reserved_1 = 0xFF;
     ds18b20_data->reserved_3 = 0x10;

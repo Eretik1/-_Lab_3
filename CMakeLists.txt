@@ -27,7 +27,6 @@ target_include_directories(ds18b20 PUBLIC
     $<INSTALL_INTERFACE:include>
 )
 
-# Специфичные опции для размещения данных
 if(CMAKE_C_COMPILER_ID MATCHES "GNU")
     target_compile_options(ds18b20 PRIVATE
         -ffunction-sections
@@ -39,7 +38,6 @@ if(CMAKE_C_COMPILER_ID MATCHES "GNU")
     )
 endif()
 
-# Упрощенная установка (опционально)
 install(TARGETS ds18b20
     DESTINATION lib
 )
