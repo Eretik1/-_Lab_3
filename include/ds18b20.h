@@ -29,6 +29,8 @@ typedef struct {
     uint8_t reserved_2;
     uint8_t reserved_3;
     uint8_t crc;
+
+    int8_t rom[8];
     
     float temperature_log[100];
     uint8_t log_index;
