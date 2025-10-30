@@ -38,8 +38,8 @@ void ds18b20_fill_with_test_data(void) {
     
     ds18b20_data->temperature_lsb = 0x50;
     ds18b20_data->temperature_msb = 0x05;
-    ds18b20_data->user_byte_1 = 0xAA;
-    ds18b20_data->user_byte_2 = 0xBB;
+    ds18b20_data->T_H = 0x0B;
+    ds18b20_data->T_L = 0x0A;
     ds18b20_data->configuration = 0x7F;
     ds18b20_data->reserved_1 = 0xFF;
     ds18b20_data->reserved_2 = 0x00;
@@ -66,8 +66,8 @@ void ds18b20_print_structure(void) {
     printf("\nScratchpad Data:\n");
     printf("Temperature LSB: 0x%02X\n", ds18b20_data->temperature_lsb);
     printf("Temperature MSB: 0x%02X\n", ds18b20_data->temperature_msb);
-    printf("User Byte 1: 0x%02X\n", ds18b20_data->user_byte_1);
-    printf("User Byte 2: 0x%02X\n", ds18b20_data->user_byte_2);
+    printf("User Byte 1: 0x%02X\n", ds18b20_data->T_H);
+    printf("User Byte 2: 0x%02X\n", ds18b20_data->T_L);
     printf("Configuration: 0x%02X\n", ds18b20_data->configuration);
     printf("Reserved 1: 0x%02X\n", ds18b20_data->reserved_1);
     printf("Reserved 2: 0x%02X\n", ds18b20_data->reserved_2);

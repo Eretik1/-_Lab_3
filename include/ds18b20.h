@@ -22,8 +22,8 @@
 typedef struct {
     uint8_t temperature_lsb;
     int8_t temperature_msb;
-    uint8_t user_byte_1;
-    uint8_t user_byte_2;
+    int8_t T_H;
+    int8_t T_L;
     uint8_t configuration;
     uint8_t reserved_1;
     uint8_t reserved_2;
